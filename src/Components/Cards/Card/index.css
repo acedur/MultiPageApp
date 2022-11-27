@@ -1,0 +1,25 @@
+.image{
+    height: 375px;
+    width: 375px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.single-card-container{
+    width: 100%;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    text-overflow: ellipsis;
+}
