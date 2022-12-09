@@ -9,7 +9,7 @@ function Card({ data, singleProduct = false }) {
       <div className="single-card-container">
         <div className="header">{title}</div>
         <div>{description}</div>
-        <img src={image} alt="An Image" className="image" />
+        <img src={image} alt={"Slika"} className="image" />
         <div className="price">Price : {price}$</div>
       </div>
     );
@@ -17,7 +17,7 @@ function Card({ data, singleProduct = false }) {
   return (
     <NavLink to={`/product/${id}`} className="card-container">
       <div className="header">{title}</div>
-      <img src={image} alt="An Image" className="image" />
+      <img src={image} alt={"Slika"} className="image" />
       <div className="price">Price : {price}$</div>
     </NavLink>
   );

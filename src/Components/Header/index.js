@@ -4,13 +4,14 @@ import Loading from "../Loading";
 import "./index.css";
 
 function Header() {
-  const [data, setData] = useState(["Home"]);
+  const [data, setData] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
       .then((res) => res.json())
       .then((json) => setData([...data, ...json]));
+    // eslint-disable-next-line
   }, []);
   if (data.length === 0) {
     return (
@@ -23,7 +24,7 @@ function Header() {
     <div className="header-container">
       <NavLink to={"/"}>
         <img
-          src="https://fakestoreapi.com/icons/logo.png"
+          src="https://previews.123rf.com/images/briang77/briang771602/briang77160200186/51929350-business-storefront.jpg"
           alt="logo"
           className="logo"
         />
@@ -32,10 +33,7 @@ function Header() {
         <div className="primary-nav-container">
           {data.map((item) => {
             return (
-              <NavLink
-                to={item === "Home" ? "/" : `category/${item}`}
-                className="btnNav"
-              >
+              <NavLink key={item} to={`category/${item}`} className="btnNav">
                 {item}
               </NavLink>
             );
@@ -43,15 +41,12 @@ function Header() {
         </div>
         <div className="burgerMenu">
           <div className="btnNav" onClick={() => setShowMenu(!showMenu)}>
-            <label for="hamburger">&#9776;</label>
+            <label htmlFor="hamburger">&#9776;</label>
           </div>
           <div className={`hidenMenu ${showMenu ? "active" : ""}`}>
             {data.map((item) => {
               return (
-                <NavLink
-                  to={item === "Home" ? "/" : `category/${item}`}
-                  className="btnNav"
-                >
+                <NavLink key={item} to={`category/${item}`} className="btnNav">
                   {item}
                 </NavLink>
               );

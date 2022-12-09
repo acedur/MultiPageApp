@@ -6,26 +6,23 @@ import Loading from "../Loading";
 function Product() {
   const { product } = useParams();
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     fetch(`https://fakestoreapi.com/products/${product}`)
       .then((res) => res.json())
       .then((json) => {
-        setLoading(false);
         setData(json);
       });
   }, [product]);
 
-  if (loading) {
+  if (data.length === 0) {
     return (
       <div className="content-container">
         <Loading />
       </div>
     );
   }
-
+  console.log(data);
   return (
     <div className="content-container">
       <Card data={data} singleProduct={true} />

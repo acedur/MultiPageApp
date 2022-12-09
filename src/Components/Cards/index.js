@@ -4,19 +4,16 @@ import Card from "./Card";
 
 function Cards() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => {
-        setLoading(false);
         setData(json);
       });
   }, []);
 
-  if (loading) {
+  if (data.length === 0) {
     return (
       <div className="content-container">
         <Loading />
@@ -27,7 +24,7 @@ function Cards() {
   return (
     <div className="content-container">
       {data.map((item) => {
-        return <Card data={item} />;
+        return <Card key={item.id} data={item} />;
       })}
     </div>
   );
