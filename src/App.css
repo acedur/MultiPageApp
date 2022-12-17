@@ -50,4 +50,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: larger;
+    font-weight: bolder;
 }

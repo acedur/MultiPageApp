@@ -1,26 +1,95 @@
-.image{
+@media screen and (max-width: 1050px){
+    .single-card-container {
+        flex-direction: column;
+    }
+}
+
+.image-card{
     height: 375px;
     width: 375px;
 }
 
-.header {
+.header-card {
     max-width: 100%;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: bolder;
     color: black;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.single-card-container{
+.price-card {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.single-card-container {
     width: 100%;
+    height: 80vh;
     padding-left: 20vh;
     padding-right: 20vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     text-overflow: ellipsis;
+}
+
+.single-card-image {
+    height: 450px;
+    width: 450px;
+}
+
+.card-info-container {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.single-card-header{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.description {
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 5px;
+    font-size: large;
+    margin: 5px;
+}
+
+.price-single-product {
+    height: 30px;
+    width: 200px;
+    border: 1px;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnBack {
+    width: 150px;
+    height: 50px;
+    background-color: #32326d;
+    color: whitesmoke;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+    margin: 10px;
 }
