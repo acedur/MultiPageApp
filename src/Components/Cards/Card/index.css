@@ -22,6 +22,10 @@
 .price-card {
     font-size: medium;
     font-weight: bold;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .single-card-container {
@@ -67,7 +71,7 @@
     height: 30px;
     width: 200px;
     border: 1px;
-    border-color: whitesmoke;
+    border-style: solid;
     border-radius: 5px;
     background-color: whitesmoke;
     padding: 10px;

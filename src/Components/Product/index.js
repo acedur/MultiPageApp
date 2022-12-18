@@ -17,12 +17,11 @@ function Product() {
 
   if (data.length === 0) {
     return (
-      <div className="content-container">
+      <div className="loader-container content-container">
         <Loading />
       </div>
     );
   }
-  console.log(data);
   return (
     <div className="content-container">
       <Card data={data} singleProduct={true} />

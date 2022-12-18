@@ -15,7 +15,7 @@ function Header() {
   }, []);
   if (data.length === 0) {
     return (
-      <div className="header-container">
+      <div className="loader-container header-container">
         <Loading />
       </div>
     );

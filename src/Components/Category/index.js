@@ -17,7 +17,7 @@ function Category() {
 
   if (data.length === 0) {
     return (
-      <div className="content-container">
+      <div className="loader-container content-container">
         <Loading />
       </div>
     );
